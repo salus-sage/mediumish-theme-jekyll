@@ -1,4 +1,6 @@
 ---
+layout: page
+permalink: /table
 title: Table test
 ---
 
