@@ -17,10 +17,10 @@ title: Table test
       </tr>
     </thead>
     {% endif %}
-    <tbody>
-      {% tablerow pair in row %}
-        {{ pair[1] }}
-      {% endtablerow %}
-    </tbody>
+
+    {% tablerow pair in row %}
+      {{ pair[1] }}
+    {% endtablerow %}
+
   {% endfor %}
 </table>
