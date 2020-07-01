@@ -9,15 +9,18 @@ title: Table test
 <table>
   {% for row in site.data.ncbs-repository %}
     {% if forloop.first %}
-    <tr>
-      {% for pair in row %}
-        <th>{{ pair[0] }}</th>
-      {% endfor %}
-    </tr>
+    <thead>
+      <tr>
+        {% for pair in row %}
+          <th>{{ pair[0] }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
     {% endif %}
-
-    {% tablerow pair in row %}
-      {{ pair[1] }}
-    {% endtablerow %}
+    <tbody>
+      {% tablerow pair in row %}
+        {{ pair[1] }}
+      {% endtablerow %}
+    </tbody>
   {% endfor %}
 </table>
