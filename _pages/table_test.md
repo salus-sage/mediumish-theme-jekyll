@@ -4,7 +4,7 @@ permalink: /table
 title: Table test
 ---
 
-{% assign row = site.data.ncbs-repository[0] %}
+{% assign row = site.data.ncbs-repository %}
 
 <table>
   {% for row in site.data.ncbs-repository %}
