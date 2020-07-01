@@ -4,7 +4,7 @@ permalink: /table
 title: Table test
 ---
 
-{% assign row = site.data.authors[0] %}
+{% assign row = site.data.ncbs-repository[0] %}
 {{ row | inspect }}
 
 {% for pair in row %}
@@ -13,7 +13,7 @@ title: Table test
 
 
 <table>
-  {% for row in site.data.authors %}
+  {% for row in site.data.ncbs-repository %}
     {% if forloop.first %}
     <tr>
       {% for pair in row %}
