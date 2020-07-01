@@ -5,12 +5,6 @@ title: Table test
 ---
 
 {% assign row = site.data.ncbs-repository[0] %}
-{{ row | inspect }}
-
-{% for pair in row %}
-  {{ pair | inspect }}
-{% endfor %}
-
 
 <table>
   {% for row in site.data.ncbs-repository %}
@@ -21,5 +15,9 @@ title: Table test
       {% endfor %}
     </tr>
     {% endif %}
+
+    {% tablerow pair in row %}
+      {{ pair[1] }}
+    {% endtablerow %}
   {% endfor %}
 </table>
